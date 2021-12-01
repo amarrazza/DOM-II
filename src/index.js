@@ -24,3 +24,32 @@ const bigger = (event,img) => {
 images.forEach(img => {
     img.addEventListener('dblclick', (event) => bigger(event,img))
 });
+
+const header = document.querySelector('header');
+
+const scroll = () => {
+    header.style.backgroundColor = 'blue';
+}
+
+document.addEventListener('wheel', scroll);
+
+const paras = document.querySelector('.intro img');
+
+const opac = () => {
+    paras.style.opacity = '10%';
+}
+
+paras.addEventListener('click', opac)
+
+const foot = document.querySelector('footer p');
+
+const footBorder = () => {
+    foot.style.border = '4px solid red';
+}
+
+document.addEventListener('keydown', footBorder);
+
+const footUnborder = () => {
+    foot.style.border = '';
+}
+document.addEventListener('keyup', footUnborder);
